@@ -9,7 +9,7 @@ Atlas is **not** an AI application, chatbot, SaaS product, Roblox experience, or
 - Shared engineering and security guidance in `core/`.
 - One reusable Roblox research skill in `skills/roblox-research/`.
 - One specialist definition in `agents/`.
-- Separate Claude Code and OpenCode integration guidance in `adapters/`.
+- Separate Claude Code and OpenCode native skill/agent files in `.claude/` and `.opencode/`, with adapter guidance in `adapters/`.
 - Roblox Studio MCP evaluation guidance in `integrations/roblox-studio/`.
 - A standard-library validator for required files and local Markdown links.
 
@@ -21,7 +21,7 @@ These are initial foundations, not a complete toolkit. No native plugin package,
 
 ## Setup and use
 
-No installer exists. Read the relevant adapter guide and manually make Atlas guidance available to your coding agent. Do not overwrite existing agent settings or permission files. See [Claude Code](adapters/claude-code/README.md) and [OpenCode](adapters/opencode/README.md).
+No installer exists. The repository-local `.claude/` and `.opencode/` skill/agent files are intended for their respective hosts when opened at this repository. Review behavior before use; no user-wide settings or permissions are changed. See [Claude Code](adapters/claude-code/README.md) and [OpenCode](adapters/opencode/README.md).
 
 ## Security
 

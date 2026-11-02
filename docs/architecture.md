@@ -9,6 +9,7 @@ Atlas uses one portable guidance core with native adapters around it. The design
 - `agents/`: specialist role contracts (purpose, activation, inputs, outputs, boundaries); host adapters translate these only when needed.
 - `integrations/`: guidance for external systems and research practices; not implementations of those systems.
 - `adapters/`: per-host loading formats, instructions, and compatibility notes.
+- `.claude/` and `.opencode/`: host-discoverable skills and specialist agent definitions for repository-local use.
 - `scripts/`, `tests/`: small deterministic project validation and its tests.
 - `docs/`: project architecture, standards, sources, and roadmap.
 

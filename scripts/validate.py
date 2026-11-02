@@ -12,6 +12,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = (
     "README.md",
+    ".claude/skills/roblox-research/SKILL.md",
+    ".claude/agents/roblox-researcher.md",
+    ".opencode/skills/roblox-research/SKILL.md",
+    ".opencode/agents/roblox-researcher.md",
     "core/engineering-standards.md",
     "core/security-policy.md",
     "skills/roblox-research/SKILL.md",

@@ -14,11 +14,11 @@ Atlas repository documentation and agent instructions use clear English. Keep us
 
 ### Skill
 
-Add a focused folder under `skills/` with `SKILL.md`. State when to use it, procedure, output expectations, and security boundaries. Add host-specific metadata only in an adapter where required.
+Add a focused folder under `skills/` with `SKILL.md`. State when to use it, procedure, output expectations, and security boundaries. When exposed natively, mirror it under `.claude/skills/` and `.opencode/skills/` using each host's documented metadata; keep instructions synchronized.
 
 ### Specialist role
 
-Add a Markdown contract under `agents/` defining responsibility, activation conditions, inputs, outputs, boundaries, and handoff. Do not duplicate core policy.
+Add a Markdown contract under `agents/` defining responsibility, activation conditions, inputs, outputs, boundaries, and handoff. Add host-native definitions under `.claude/agents/` or `.opencode/agents/` only with platform-specific required metadata. Do not duplicate core policy.
 
 ### Adapter
 
