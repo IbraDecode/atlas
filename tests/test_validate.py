@@ -2,10 +2,30 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.validate import REQUIRED_FILES, validate
+from scripts.validate import REQUIRED_FILES, parse_frontmatter, validate
 
 
 class ValidateTests(unittest.TestCase):
+    def test_frontmatter_required_fields_and_directory_name(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            for relative in REQUIRED_FILES:
+                path = root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("# fixture\n", encoding="utf-8")
+            canonical = root / "skills/roblox-research/SKILL.md"
+            canonical.write_text("---\nname: roblox-research\ndescription: Test\n---\n\nBody.\n", encoding="utf-8")
+            opencode_skill = root / ".opencode/skills/roblox-research/SKILL.md"
+            opencode_skill.write_text("---\nname: other-name\ndescription: Test\n---\n\nDifferent.\n", encoding="utf-8")
+            errors = validate(root)
+            self.assertIn("skill name must match directory in frontmatter: .opencode/skills/roblox-research/SKILL.md", errors)
+            self.assertIn("skill instructions drift from canonical file: .opencode/skills/roblox-research/SKILL.md", errors)
+
+    def test_parse_frontmatter_requires_closing_delimiter(self):
+        fields, _, errors = parse_frontmatter("---\nname: sample\n", "sample.md")
+        self.assertEqual(fields, {})
+        self.assertEqual(errors, ["unterminated YAML frontmatter: sample.md"])
+
     def test_repository_passes(self):
         self.assertEqual(validate(Path(__file__).resolve().parents[1]), [])
 

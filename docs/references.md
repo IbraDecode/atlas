@@ -1,6 +1,8 @@
 # Official References
 
-Access date for pages below: **2026-11-02**. Titles and behavior summaries reflect pages retrieved for this foundation. Recheck current vendor documentation before relying on version-sensitive behavior.
+Access date for pages below: **2026-11-02**. Titles and behavior summaries reflect pages retrieved for this foundation and adapter verification. Recheck current vendor documentation before relying on version-sensitive behavior.
+
+Observed development environment: Claude Code CLI **2.1.316**; OpenCode CLI unavailable. These are environment observations, not supported-version guarantees. Claude CLI print output did not prove project skill or agent discovery; neither host's adapter runtime discovery is claimed as tested.
 
 ## Claude Code
 

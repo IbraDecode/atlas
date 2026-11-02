@@ -11,7 +11,7 @@ Atlas is **not** an AI application, chatbot, SaaS product, Roblox experience, or
 - One specialist definition in `agents/`.
 - Separate Claude Code and OpenCode native skill/agent files in `.claude/` and `.opencode/`, with adapter guidance in `adapters/`.
 - Roblox Studio MCP evaluation guidance in `integrations/roblox-studio/`.
-- A standard-library validator for required files and local Markdown links.
+- A standard-library validator for required files, adapter metadata, skill-copy parity, and local Markdown links.
 
 These are initial foundations, not a complete toolkit. No native plugin package, installer, Roblox Studio MCP connection, or additional specialist agents are included yet.
 
@@ -36,7 +36,7 @@ python3 scripts/validate.py
 python3 -m unittest discover -s tests -v
 ```
 
-The validator checks required files and relative Markdown links. It does not fetch URLs, validate agent-host configuration, or test a Roblox Studio connection.
+The validator checks required files, required native adapter frontmatter keys, parity of mirrored skill instructions, and relative Markdown links. It does not fully parse YAML, fetch URLs, prove host runtime discovery, or test a Roblox Studio connection.
 
 ## Contributing
 

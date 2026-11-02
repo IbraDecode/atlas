@@ -9,6 +9,10 @@ This repository includes native Claude Code skill and subagent files under `.cla
 
 The canonical skill content remains in `skills/`. Keep the adapter copy synchronized when changing it. The agent definition is a Claude Code native adaptation, not a cross-platform role file.
 
+## Verification status
+
+The files follow documented Claude Code project paths and Markdown frontmatter. CLI `2.1.316` is available in the development environment. One `claude -p` invocation returned text, but it did not inspect whether the skill or subagent was discovered; adapter runtime discovery remains unverified. Do not treat that response as a loading test.
+
 ## Other native mechanisms
 
 Claude Code can also use hooks, MCP servers, and plugins. Atlas does not install hooks or configure MCP. `.mcp.json` or permission configuration is deliberately omitted because no specific server or permission change is required. Do not add a third-party MCP configuration without reviewing its code, access scope, and behavior.
