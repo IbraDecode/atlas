@@ -28,6 +28,10 @@ Document exact native formats and prerequisites, cite official docs, and state w
 
 Run `python3 scripts/validate.py` and `python3 -m unittest discover -s tests -v`. Add a small standard-library test for meaningful validator changes. Check `git diff --check` before proposing changes.
 
-## Versions and releases
+## Versions and compatibility
 
-This repository has no formal versioning, compatibility matrix, release automation, or release guarantees yet. When releases begin, document supported host versions and migration policy before claiming compatibility. Do not create or publish releases without explicit authorization.
+Python 3.10+ is the current minimum for running the repository validator and tests. This is a tooling baseline, not evidence that older Python versions work or a guarantee for every Atlas feature. No host-version support is established: Claude Code and OpenCode adapter behavior remains unverified at runtime. Record exact versions and test procedures before claiming host compatibility.
+
+## Releases
+
+This repository has no formal release cadence, versioning scheme, compatibility matrix, or release automation. Define these with maintainers before publishing releases or making compatibility guarantees. Do not create or publish releases without explicit authorization.

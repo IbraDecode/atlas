@@ -4,8 +4,7 @@ Priority order; none of these items are implemented unless listed in the root RE
 
 ## Next
 
-1. Obtain an OpenCode CLI environment and verify both hosts discover the native skill and specialist agent; record exact versions and test procedures.
-2. Decide a compatibility/versioning policy and minimum supported Python version for the validator.
+1. Obtain an OpenCode CLI environment and verify Claude Code and OpenCode discover native skill and agent; record exact versions and test procedures. Claude Code runtime discovery remains unverified.
 3. Select a specific Roblox Studio MCP candidate only after maintainer, implementation, permissions, and maintenance review; document tested capabilities without calling it official absent Roblox evidence.
 
 ## Later

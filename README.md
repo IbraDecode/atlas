@@ -29,7 +29,7 @@ Follow [Atlas security policy](core/security-policy.md). Review external MCP ser
 
 ## Validate
 
-Requires Python 3.10+; no third-party packages.
+Running Atlas validation requires Python 3.10+; no third-party packages. This is the project's current tooling minimum, not a guarantee that older versions work.
 
 ```sh
 python3 scripts/validate.py
@@ -40,7 +40,7 @@ The validator checks required files, required native adapter frontmatter keys, p
 
 ## Contributing
 
-Read [contribution guidance](docs/contributing.md). Use English for repository documentation and agent instructions. Run validation and tests before submitting changes. No release process or compatibility guarantees exist yet.
+Read [contribution guidance](docs/contributing.md). Use English for repository documentation and agent instructions. Run validation and tests before submitting changes. Python 3.10+ is the current minimum for validation tooling; supported Claude Code and OpenCode versions remain unverified, with no release or compatibility guarantees yet.
 
 ## Next priorities
 
