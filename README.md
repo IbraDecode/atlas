@@ -10,10 +10,10 @@ Atlas is **not** an AI application, chatbot, SaaS product, Roblox experience, or
 - One reusable Roblox research skill in `skills/roblox-research/`.
 - One specialist definition in `agents/`.
 - Separate Claude Code and OpenCode native skill/agent files in `.claude/` and `.opencode/`, with adapter guidance in `adapters/`.
-- Roblox Studio MCP evaluation guidance in `integrations/roblox-studio/`.
+- Roblox Studio's documented local MCP server and safety guidance in `integrations/roblox-studio/`; no server or client plugin is installed or bundled.
 - A standard-library validator for required files, adapter metadata, skill-copy parity, and local Markdown links.
 
-These are initial foundations, not a complete toolkit. No native plugin package, installer, Roblox Studio MCP connection, or additional specialist agents are included yet.
+These are initial foundations, not a complete toolkit. No native plugin package, installer, Roblox Studio MCP connection, Roblox Studio Agent Plugin installation, or additional specialist agents are included yet.
 
 ## Architecture
 

@@ -1,8 +1,8 @@
 # Official References
 
-Access date for pages below: **2026-11-02**. Titles and behavior summaries reflect pages retrieved for this foundation and adapter verification. Recheck current vendor documentation before relying on version-sensitive behavior.
+Access date for pages below: **2026-11-02**. Titles and summaries reflect pages retrieved for this foundation and adapter review. Recheck vendor docs before relying on version-sensitive behavior.
 
-Observed development environment: Claude Code CLI **2.1.316**; OpenCode CLI unavailable. These are environment observations, not supported-version guarantees. Claude CLI print output did not prove project skill or agent discovery; neither host's adapter runtime discovery is claimed as tested.
+Observed development environment: Claude Code CLI **2.1.316**; OpenCode CLI unavailable. These are observations, not supported-version guarantees. Claude CLI print output did not prove project skill or agent discovery; neither host's adapter runtime discovery is claimed as tested.
 
 ## Claude Code
 
@@ -19,7 +19,6 @@ Claude Code project skills use `.claude/skills/<name>/SKILL.md`; skill frontmatt
 
 - **Config** — https://opencode.ai/docs/config/ — JSON/JSONC configuration and config precedence.
 - **Agents** — https://opencode.ai/docs/agents/ — Agent definitions in config or Markdown.
-- **Claude Code subagents** — https://code.claude.com/docs/en/sub-agents — Project subagent definition format and skill preloading.
 - **Agent Skills** — https://opencode.ai/docs/skills/ — Skill layout, frontmatter, and paths.
 - **Commands** — https://opencode.ai/docs/commands/ — Native commands.
 - **Plugins** — https://opencode.ai/docs/plugins/ — Native plugin mechanisms.
@@ -34,8 +33,13 @@ OpenCode project skills are discovered in `.opencode/skills/<name>/SKILL.md`; fr
 - **Script editor** — https://create.roblox.com/docs/studio/script-editor — Editor features.
 - **Studio testing modes** — https://create.roblox.com/docs/studio/testing-modes — Testing in Studio.
 - **Luau** — https://create.roblox.com/docs/luau — Official Luau overview.
+- **Roblox Studio MCP server** — https://create.roblox.com/docs/studio/mcp — Built-in local Studio MCP server, client setup, tool categories, and security note that clients can read and change open places.
 
-The Creator Hub Studio page retrieved here does not specify an official Roblox Studio MCP. This is a limitation of the checked page, not proof that no official MCP exists.
+## Roblox Studio Agent Plugin
+
+- **Roblox Studio Agent Plugin README** — https://github.com/Roblox/roblox-studio-agent-plugin — Repository hosted by Roblox GitHub organization; README describes plugin setup and calls it Roblox's official plugin. Treat that as a repository claim; do not infer unverified security or compatibility properties.
+- **Security notes** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/SECURITY.md — Installer actions, approval, and signature-verification claims as described by the repository. Does not specify AI-provider retention or training.
+- **Releases** — https://github.com/Roblox/roblox-studio-agent-plugin/releases — No releases listed when checked; not evidence of compatibility guarantees.
 
 ## Model Context Protocol
 
@@ -43,4 +47,4 @@ The Creator Hub Studio page retrieved here does not specify an official Roblox S
 
 ## Verification boundaries
 
-No specific Roblox Studio MCP implementation, Roblox-owned MCP endpoint, or live Studio connection was verified. Atlas does not claim one exists or is supported. Host configuration details are documented separately and must be checked against the linked vendor docs before use.
+Roblox Creator Hub documents a Studio MCP server. No Atlas installation, live Studio connection, tool invocation, or publish test was performed. The plugin and Studio server are separate components. Plugin compatibility with a particular host/version and provider-side data practices must be verified from current sources before relying on them.

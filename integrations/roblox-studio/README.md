@@ -1,21 +1,40 @@
 # Roblox Studio Integration
 
-Atlas documents how coding agents may be connected to Roblox Studio; it does not implement Studio integration or bundle an MCP server.
+Atlas documents supported connection concepts and safety boundaries; it does not implement an MCP server, install a client plugin, or configure host permissions.
 
-## Verified scope
+## Official Studio MCP
 
-Roblox Creator Hub documents Studio, script editing, testing modes, collaboration, and Luau. The official Studio and Luau pages checked for this foundation do not specify a Roblox-owned Studio MCP server or its configuration. This does not prove no official integration exists elsewhere or later; current status remains unverified.
+Roblox Creator Hub documents an MCP server built into Roblox Studio. The server runs locally and communicates with compatible AI clients over stdio, connecting clients to the currently open Studio session. Studio exposes controls to enable the server and client setup paths such as Quick connect or manual configuration. Exact support and config differ by client; follow current first-party instructions for the chosen client and Studio version.
 
-MCP is a protocol, not an implementation. Third-party Roblox Studio MCP projects may differ in ownership, capabilities, transport, permissions, and maintenance. Do not label one official without a Roblox source confirming it.
+The official documentation lists tools across these categories:
 
-## Before connecting any MCP server
+- Script read, search, and multi-edit.
+- Data-model search and inspection.
+- Luau execution.
+- Asset search, generation, insertion, upload, and storage.
+- Play controls, Studio state, console output, and screenshots.
+- Simulated keyboard, mouse, and character input.
+- Documentation/skill retrieval and Studio session listing.
 
-1. Identify its maintainer and repository or distribution source.
-2. Inspect implementation, dependencies, releases, and issue history.
-3. Review tools, file/data access, network behavior, and any ability to edit or publish.
-4. Check the target host's current MCP configuration and permission behavior.
-5. Start with the minimum access needed; request explicit approval for edits, publishing, or external effects.
-6. Never place credentials in this repository. Prefer host-managed environment variables or secret handling.
-7. Test in a disposable/local experience before using a live project; do not claim a test passed unless run.
+This tool surface can read and change content in an open place. In particular, Luau execution, multi-edit, asset upload/insertion, play controls, and simulated input can have consequential effects. Connect only clients you trust; review tool calls, protect valuable places with backups, and first test in a disposable experience. Atlas does not configure access restrictions or guarantee a read-only mode.
 
-No MCP endpoint, executable, or server configuration is prescribed here because no specific compatible implementation has been verified.
+## Roblox Studio Agent Plugin
+
+Roblox hosts [`roblox-studio-agent-plugin`](https://github.com/Roblox/roblox-studio-agent-plugin) in its GitHub organization. Its README describes it as Roblox's official plugin for AI assistants and gives setup instructions for supported clients. Attribute that official-status statement to the repository; do not treat GitHub organization ownership alone as proof of every security, compatibility, or maintenance claim.
+
+The plugin is a client-side setup/instruction package for Studio's built-in MCP server; it is distinct from the Studio MCP server itself. The repository security note describes user-approved installer actions and signature verification for Roblox-hosted downloads. The reviewed note does not establish AI-provider data handling, retention, or training behavior. The releases page currently lists no releases, so no release-based compatibility guarantee is available from that page.
+
+No plugin installation, server connection, or Studio session was performed for Atlas. This repository does not require or bundle the plugin.
+
+## Review before connection
+
+1. Verify current official Studio setup and the target client's native MCP configuration.
+2. Confirm server command/transport and inspect every tool exposed to the agent.
+3. Treat all project edits, code execution, asset operations, uploads, and simulated inputs as potentially consequential; require user approval where appropriate.
+4. Use minimum necessary access, protect or back up the place, and test in a disposable/local experience first.
+5. Keep credentials out of repository files and logs. Do not claim private-data guarantees unless the relevant client/provider documents them.
+6. Re-check compatibility, security notes, and release status before updates; they can change independently of Atlas.
+
+## Scope and claims
+
+The MCP server is a Roblox Studio feature documented by Roblox. Atlas provides guidance only. No live Studio connection, tool invocation, plugin installation, or publishing test has been performed.
