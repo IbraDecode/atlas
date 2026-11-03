@@ -22,9 +22,11 @@ This tool surface can read and change content in an open place. In particular, L
 
 Roblox hosts [`roblox-studio-agent-plugin`](https://github.com/Roblox/roblox-studio-agent-plugin) in its GitHub organization. Its README describes it as Roblox's official plugin for AI assistants and gives setup instructions for supported clients. Attribute that official-status statement to the repository; do not treat GitHub organization ownership alone as proof of every security, compatibility, or maintenance claim.
 
-The plugin is a client-side setup/instruction package for Studio's built-in MCP server; it is distinct from the Studio MCP server itself. The repository security note describes user-approved installer actions and signature verification for Roblox-hosted downloads. The reviewed note does not establish AI-provider data handling, retention, or training behavior. The releases page currently lists no releases, so no release-based compatibility guarantee is available from that page.
+The plugin is a client-side setup/instruction package for Studio's built-in MCP server; it is distinct from the Studio MCP server itself. At review on 2026-11-02, its Claude Code plugin manifest reported version `0.2.2`, author `Roblox`, and macOS/Windows MCP launch commands. This is manifest data, not proof of runtime compatibility. Its releases page listed no releases.
 
-No plugin installation, server connection, or Studio session was performed for Atlas. This repository does not require or bundle the plugin.
+The repository's setup instructions describe downloading and launching Studio installers after user approval, with OS-specific signature checks against Roblox identity, then configuring or enabling the Studio MCP server. The repository's security note documents those controls; it does not establish AI-provider data handling, retention, or training behavior. Setup can change local machine and client configuration, so do not run it without explicit approval for the named actions.
+
+No plugin installation, server connection, or Studio session was performed for Atlas. This repository does not require or bundle the plugin. Its source, compatibility, and data-flow claims are not independently tested here.
 
 ## Review before connection
 

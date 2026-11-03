@@ -5,7 +5,7 @@ Priority order; none of these items are implemented unless listed in the root RE
 ## Next
 
 1. Obtain an OpenCode CLI environment and verify Claude Code and OpenCode discover native skill and agent; record exact versions and test procedures. Claude Code runtime discovery remains unverified.
-2. Review the Roblox Studio Agent Plugin's current implementation, compatibility, and security notes before recommending or installing it; no Atlas connection or installation has been tested.
+2. Complete an independent code and data-flow review of the Roblox Studio Agent Plugin and verify host/Studio compatibility before recommending it. Ask before installation, local configuration changes, or MCP connection; none have been performed by Atlas.
 
 ## Later
 

@@ -37,8 +37,13 @@ OpenCode project skills are discovered in `.opencode/skills/<name>/SKILL.md`; fr
 
 ## Roblox Studio Agent Plugin
 
-- **Roblox Studio Agent Plugin README** — https://github.com/Roblox/roblox-studio-agent-plugin — Repository hosted by Roblox GitHub organization; README describes plugin setup and calls it Roblox's official plugin. Treat that as a repository claim; do not infer unverified security or compatibility properties.
-- **Security notes** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/SECURITY.md — Installer actions, approval, and signature-verification claims as described by the repository. Does not specify AI-provider retention or training.
+- **Plugin README** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/README.md — Setup instructions; the repository describes itself as Roblox's official plugin.
+- **Claude Code plugin manifest** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/.claude-plugin/plugin.json — At review, reported version `0.2.2`, author `Roblox`, and OS-specific MCP launcher commands; manifest assertions are not runtime verification.
+- **Install guide** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/references/install.md — Repository-described installer approval and OS-specific signature checks.
+- **Connect guide** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/references/connect.md — Client configuration and Studio Quick Connect instructions; configuration may be written by Studio or a client command.
+- **Getting-started skill** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/SKILL.md — Setup flow and approval instructions.
+- **Security notes** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/skills/roblox-get-started/SECURITY.md — Installer/security assertions as described by the repository; no AI-provider retention or training details.
+- **Marketplace manifest** — https://github.com/Roblox/roblox-studio-agent-plugin/blob/main/.agents/plugins/marketplace.json — Marketplace metadata; does not establish a separate marketplace version.
 - **Releases** — https://github.com/Roblox/roblox-studio-agent-plugin/releases — No releases listed when checked; not evidence of compatibility guarantees.
 
 ## Model Context Protocol
